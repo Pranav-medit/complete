@@ -1,0 +1,322 @@
+/* Side-Bar*/
+:root{
+    --sidebar-width:240px;
+    --height:64px;
+    --clr:white;
+    --sid-height-r-width:100%;
+    --fnt-siz:20px;
+    --hvr-clr: #ff3e3e;
+    --crnt-pge-clr:chartreuse;
+    /* --tst: 10%; */
+}
+.main-sidebar *,.sidebar  *{
+    margin: 0;
+    padding:0;
+    text-decoration: none;
+}
+ 
+
+.sidebar header{         /*Heading of side bar*/
+    color: var(--clr); /*white*/
+    height: calc(var(--height)*1.6); /*64px*/
+    font-size:calc(var(--fnt-siz)*2);
+    line-height:calc(var(--height)*1.6);
+    border-bottom: 1px solid black;
+    box-sizing: border-box;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif; 
+    /* padding-left:calc(var(--height)/2); */
+    /* line-height:100px; */
+    /* font-size:var(--height); */
+}
+.sidebar{  
+    left:calc(-1*(var(--sidebar-width)));      /*Side bar styling*/
+    background-color:  #1b1b1b;
+    position: fixed;
+    width:240px;
+    overflow-y: scroll;
+    box-sizing: border-box;
+    height:var(--sid-height-r-width); /*100%*/
+    z-index: 10;
+}
+.sidebar a{
+    display:block;
+    width:var(--sid-height-r-width); /*100%*/
+    height:var(--height); /*64px*/
+    line-height: var(--height); /*64px*/
+    padding-left: calc(var(--height)/2); /*32px*/
+    color:var(--clr);         /*white*/
+    border-top: 1px solid rgba(255,255,255,.2);
+    border-bottom: 1px solid black;
+    font-size: calc(var(--fnt-siz));
+    font-weight: bold;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+.sidebar a:active,.sidebar a:hover{
+    color:var(--hvr-clr);
+    box-sizing: border-box;
+    border-left:4px solid var(--hvr-clr);
+    background-color:  #fdfdfd15;
+     /* border-bottom:2px solid #ff3e3e;*/
+}
+#science .active{
+    border-left: 4px solid var(--crnt-pge-clr);      /*This is set to highlight current page in sidebar*/
+    /*Here index is put because we have to refresh the page when we come back from contact or etc inorder to highlight*/
+}
+
+
+
+.sidebar a span{
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+#main-sidebar label #btn:hover,#main-sidebar label #cncl:hover{
+    color: var(--hvr-clr);
+}
+#main-sidebar #check{
+    display: none;
+}
+#main-sidebar label #btn,#main-sidebar label #cncl{
+    position: fixed;
+    background-color :#262626;
+    color:white;
+    border:1px solid  #262626;
+    margin: 15px 30px;
+    font-size:29px;
+    cursor: pointer;
+    border-radius:5px;
+    height: 45px;
+    width: 45px;
+    line-height: 45px;
+    z-index: 10;           /*because it keeps btn in front of div and other cont*/
+    text-align :center;
+}
+#main-sidebar label #cncl{
+    opacity:0;
+    visibility:hidden;
+}
+#check:checked ~ .sidebar{
+    left:0;
+}
+#check:checked ~label #btn{
+    visibility: hidden;
+}
+#check:checked ~ label #cncl{
+    opacity:1;
+    visibility: visible;
+    margin-left:245px;
+    /* var(--tst):600px; */
+} 
+
+#check:checked ~ section{
+    margin:240px;
+  
+}
+/* #check:checked  .main-content{ 
+    margin-left: 240px;
+} */
+
+
+body{
+    display: flex;
+}
+.main-content{
+    flex:1;
+}
+/* #outer-sidebar-box{
+    flex: 1;
+}
+.sidebar{
+    flex:10;
+
+} */
+
+#outer-sidebar-box{
+    /* flex:1; */
+    text-align: left;
+    box-sizing: border-box;  /*altering*/
+    padding-left: 4px;
+    width:54px;
+    background-color: #262626;
+}
+
+
+
+
+/* #main-sidebar{
+    box-sizing: border-box;
+    padding-left: 4px;
+    width:54px;
+    background-color: #262626;
+    /* display:block; */
+    /* margin: auto; *//*
+} */
+.main-content{
+    padding:20px;
+}
+#main-sidebar label #btn{
+    margin:0;
+}
+@media(max-width:800px){
+    #outer-sidebar-box{
+        box-sizing: border-box;
+        padding-left: 1px;
+        width:0;
+        background-color:rgba(255,255,255,.0);
+        
+        /* display:block; */
+        /* margin: auto; */
+    }
+    /* .sidebar{  
+        left:calc(-1*(var(--sidebar-width)));
+        background-color:  #1b1b1b;
+        position: fixed;
+        width:260px;
+        overflow-y: scroll;
+        box-sizing: border-box;
+        height:var(--sid-height-r-width); /*100%*/
+        /*z-index: 10;
+    } */
+    #outer-sidebar-box label #btn,#outer-sidebar-box label #cncl{
+        position: fixed;
+        background-color :#262626;
+        color:white;
+        border:1px solid  #262626;
+        margin: 10px 0px;
+        font-size:45px;
+        cursor: pointer;
+        border-radius:5px;
+        height: 50px;
+        width: 50px;
+ 
+        line-height: 50px;
+        text-align :center;
+    }
+    .main-content{
+        margin:30px;
+    }
+    #outer-sidebar-box label #btn{
+        height: 50px;
+        width: 50px;
+        font-size:40px;
+        line-height: 50px;
+        text-align :center;
+    }
+}
+body{
+    margin:0;
+    padding:0;
+    margin:0;
+    background-color: #eff3c6;
+    text-align: center; 
+    font-family: 'Merriweather', serif;
+    font-size: 1.25em;
+}
+.main-content{
+    margin: 0 2%;
+    
+    padding:0 5%;
+}
+.main-content p{
+    text-align: left;
+}
+.main-content *{
+    margin:0;
+    padding:0;
+
+}
+.main-content h3{
+    color: #a414ed;  
+}
+.main-content h1{
+   color:#002180;
+}
+.main-content h2{
+    color:purple;
+}
+#sec1{
+    text-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 1);
+    background-image: url(science\\bck1.jpg);
+    background-size: cover;
+    
+
+}
+#sec1 p{ 
+ 
+
+}
+
+#sec2{
+    text-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 1);
+    background-image: url(science\\bck2.jpg);
+    background-size: cover;
+}
+#ins-sec1{
+    padding:2%;
+    background-color: rgba(187, 255, 202, 0.77);
+}
+
+
+#ins-sec2{
+    padding:2%;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+iframe{
+    box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 1);
+}
+h3{
+    text-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 1);
+}
+.main-content #ins-sec2 section{
+   
+   margin-top:20px;
+   background-color: #00ffff52;
+   height:200px;
+}
+.main-content #ins-sec2 section h3{
+    color:#00ff5a;
+    background-color: #00008b87;
+}
+
+
+
+
+/*Back to top*/
+:root{
+    --box-wid:100px;
+    --box-higt:50px;
+    --brdr:black;
+    --bg-clr:#262626;
+    --btnclr:rgb(9, 255, 0);
+    --fnt-size:18px;
+    --brd-rad:10px;
+    --hvr-clr:red;
+
+}
+
+#bck-to-top,.learn{
+    text-decoration: none;
+    background-color: var(--bg-clr) ;
+    border-radius: var(--brd-rad);
+    font-size: 18px;
+    box-sizing: border-box;
+    border:2px solid var(--brdr);
+    padding: 10px;
+    width:var( --box-wid);
+    height: var(--box-higt);
+    color:var(--btnclr);
+    box-sizing: border-box;
+}
+#bck-to-top:link,#bck-to-top:visited,.learn:link,.learn:visited{
+    color:var(--btnclr);
+}
+#bck-to-top:hover,.learn:hover{
+    box-sizing: border-box;
+    border:4px solid var(--brdr);
+    background-color: var(--bg-clr) ;
+}
+#bck-to-top:active,.learn:active{
+    color:var(--hvr-clr);
+}

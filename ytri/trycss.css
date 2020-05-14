@@ -1,0 +1,57 @@
+#bck-to-top{
+    box-sizing: border-box;
+    text-decoration: none;
+    background-color: #262626 ;
+    border-radius: 10px;
+    font-size: 18px;   
+    border:2px solid black;
+    padding: 10px;
+    color:white;
+}
+#bck-to-top:link,#bck-to-top:visited{
+    color:white;
+}
+/* #bck-to-top:hover{
+    background-color: #262626f0 ;
+} */
+#bck-to-top:active{
+    color:var(--hvr-clr);
+}
+#outer div{
+    margin: 200px auto;
+    text-align: left;
+}
+#inner{
+    display:flex;
+    justify-content: center;
+    width:118.8px;
+    height:46.98px;
+    border-radius: 10px; 
+}
+/* #bck-to-top::before{
+    position:absolute;
+    content:'';
+    left: 0em;
+    top: 0em;
+    bottom: 0em;
+    right: 0em;
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+}
+#inner{
+
+    background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+} */
+:hover{
+    border: 2px solid linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+    animation: rotate 1.5s linear infinite;
+  }
+  @keyframes rotate {
+    0%{
+      filter: hue-rotate(0deg);
+    }
+    100%{
+      filter: hue-rotate(360deg);
+    }
+  }

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="favicon.ico">
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="contac.css">
+    <title>Document</title>
+</head>
+<body id="contac">
+    <div id="outer-sidebar-box">
+        <div id="main-sidebar">
+
+            <input type="checkbox" id="check">
+            <label for="check">
+                <i id="btn" class="fas fa-bars"></i>
+                <i id="cncl"class="fas fa-times"></i>
+            </label>
+            
+            <div class="sidebar">
+                <header>Menu</header>
+                <a  href="index.html"><i class="fa fa-home"></i> </i><span>Home</span> </a>
+                <a href="science.html"><i class="fas">&#xf185</i> </i><span>Spiritual</span></a>
+                <a href="about.html"><i class="fa fa-heartbeat"></i> </i><span>About</span></a>
+                <a class="active" href="contac.html"><i class="fa fa-envelope"></i> </i><span>Contact</span></a>
+                <!-- <a href="#"><i class="fa fa-futbol-o"></i> </i><span>More</span></a>
+                <a href="#"><i class="fa fa-plane"></i> </i><span>Support</span></a>
+                <a href="#"><i class="fa fa-cab"></i> </i><span>Next</span></a>
+                <a href="#"><i class="fa fa-cloud"></i> </i><span>Item</span></a> -->
+            </div>
+        </div>
+    </div>
+        <div class="main-content" >
+            <div id="cnt-us">
+                <h3 >Contact us</h3>
+            </div>
+            <div class="row">
+
+            
+            <div class="column" id="img-col">
+                 <img src="contact/contact.jpg" alt="">
+                 
+            </div>
+            <div class="column" id="inpt-col">
+                <form action="mailto:pranavprati@gmail.com" method="post">
+                    <label for="#fname">First Name :</label>
+                    <input type="text" id="fname" placeholder="Your first name..." name="First name">
+                    <label for="#lname">Last Name :</label>
+                    <input type="text" id="lname" placeholder="Your Last name..." name="Last name">
+                    <label for="#mail">Email :</label>
+                    <input type="email" id="mail" placeholder="Your Email..." name="email">
+                    <label for="#country">Your Country</label>
+                    <select name="country" id="country">
+                        <option value="India">India</option>
+                        <option value="USA">USA</option>
+                        <option value="Australia">Australia</option>
+                        <option value="Europe">Europe</option>
+                    </select> 
+                    <label for="#subject">Subject</label>
+                    <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+
+                    <input type="submit" value="Submit" id="submt">
+                </form>
+            </div>
+            </div>
+        </div>
+    
+</body>
+</html>
